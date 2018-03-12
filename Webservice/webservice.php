@@ -6,29 +6,14 @@
  * Time: 12:24
  */
 /* require the user as the parameter */
-if(isset($_GET['user']) && intval($_GET['user'])) {
+if(isset($_GET['sessionID']) && isset($_GET['mail'])) {
 
-    /* connect to the db */
-    $link = mysql_connect('rdbms.strato.de','U3276584','1-testPasswort') or die('Cannot connect to the DB');
-    mysql_select_db('DB3276584',$link) or die('Cannot select the DB');
+    //Is SessionID with mail Valid -> otherwise redict to login Page
 
-    /* grab the posts from the db */
-    $query = "SELECT * FROM nutzerdaten";
-    $result = mysql_query($query,$link) or die('Errant query:  '.$query);
+    //if($_GET['type']) == ... =>
+    //if($_GET['type']) == ... =>
+    //if($_GET['type']) == ... =>
+    //if($_GET['type']) == ... =>
 
-    /* create one master array of the records */
-    $posts = array();
-    if(mysql_num_rows($result)) {
-        while($post = mysql_fetch_assoc($result)) {
-            $posts[] = array('post'=>$post);
-        }
-    }
-
-    /* output in necessary format */
-        header('Content-type: application/json');
-        echo json_encode(array('posts'=>$posts));
-
-
-    /* disconnect from the db */
-    @mysql_close($link);
+    //else "error = true"
 }
