@@ -46,6 +46,10 @@ public class RegisterActivity extends AppCompatActivity implements
         textEmail.setText(mail);
         textPassword.setText(password);
 
+        findViewById(R.id.user_register).setOnClickListener(this);
+
+        mAuth = FirebaseAuth.getInstance();
+
     }
     private void createAccount(final String email, String password, final String name) {
         Log.d(TAG, "createAccount:" + email);
@@ -66,7 +70,7 @@ public class RegisterActivity extends AppCompatActivity implements
                             FirebaseUser user = mAuth.getCurrentUser();
                             String id = user.getUid();
                             DatabaseOperation d = new DatabaseOperation();
-                            d.setNewUser(id, name, email);
+                           // d.setNewUser(id, name, email);
                             setContentView(R.layout.activity_plan);
                         } else {
                             // If sign in fails, display a message to the user.
