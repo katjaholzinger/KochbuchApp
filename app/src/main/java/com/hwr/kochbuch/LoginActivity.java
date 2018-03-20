@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -15,6 +14,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.hwr.kochbuch.UI.MainActivity;
 
 
 public class LoginActivity extends AppCompatActivity implements
@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity implements
         //showProgressDialog();
 
         // [START sign_in_with_email]
-        mAuth.signInWithEmailAndPassword(email, password)
+        Task<AuthResult> authResultTask = mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -68,7 +68,8 @@ public class LoginActivity extends AppCompatActivity implements
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            setContentView(R.layout.activity_plan);
+
+                            setContentView(R.layout.activity_main);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
@@ -80,7 +81,7 @@ public class LoginActivity extends AppCompatActivity implements
                         if (!task.isSuccessful()) {
                             //
                         }
-                       // hideProgressDialog();
+                        // hideProgressDialog();
                         // [END_EXCLUDE]
                     }
                 });

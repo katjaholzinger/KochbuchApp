@@ -3,8 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://C:\_projekte\KochbuchApp\App.iml" filepath="C:\_projekte\KochbuchApp\App.iml" />
-      <module fileurl="file://$PROJECT_DIR$/KochbuchApp.iml" filepath="$PROJECT_DIR$/KochbuchApp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\thgae\AndroidStudioProjects\KochbuchAppGit\KochbuchApp.iml" filepath="C:\Users\thgae\AndroidStudioProjects\KochbuchAppGit\KochbuchApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/KochbuchAppGit.iml" filepath="$PROJECT_DIR$/.idea/KochbuchAppGit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/App/app.iml" filepath="$PROJECT_DIR$/App/app.iml" />
+      <module fileurl="file://C:\Users\thgae\AndroidStudioProjects\KochbuchAppGit\app\app.iml" filepath="C:\Users\thgae\AndroidStudioProjects\KochbuchAppGit\app\app.iml" />
     </modules>
   </component>
 </project>

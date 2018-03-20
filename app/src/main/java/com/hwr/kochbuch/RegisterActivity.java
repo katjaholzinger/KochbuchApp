@@ -14,9 +14,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-
-import java.util.UUID;
 
 public class RegisterActivity extends AppCompatActivity implements
         View.OnClickListener{
@@ -71,7 +68,7 @@ public class RegisterActivity extends AppCompatActivity implements
                             String id = user.getUid();
                             DatabaseOperation d = new DatabaseOperation();
                            // d.setNewUser(id, name, email);
-                            setContentView(R.layout.activity_plan);
+                            setContentView(R.layout.activity_main);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());
